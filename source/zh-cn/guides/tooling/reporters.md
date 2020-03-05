@@ -148,7 +148,7 @@ npm install --save-dev mocha mochawesome mochawesome-merge mochawesome-report-ge
 这样就会生成`cypress/results/mochawesome.json, cypress/results/mochawesome_001.json, ...`等报告文件。然后我门就可以使用{% url 'mochawesome-merge' https://github.com/antontelesh/mochawesome-merge %}来合并它们。
 
 ```shell
-npx mochawesome-merge --reportDir cypress/results > mochawesome.json
+npx mochawesome-merge cypress/results/mochawesome*.json > mochawesome.json
 ```
 
 现在我们可以利用`mochawesome.json`和% url https://github.com/adamgruber/mochawesome-report-generator %}来生成一个合并后的HTML报告了：
